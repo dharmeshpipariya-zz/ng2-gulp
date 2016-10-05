@@ -1,6 +1,9 @@
 {
   "name": "ng2-gulp",
   "version": "0.0.1",
+  "scripts": {
+    "postinstall": "gulp vendors"
+  },
   "dependencies": {
     "@angular/common": "~2.0.1",
     "@angular/compiler": "~2.0.1",

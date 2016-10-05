@@ -8,7 +8,7 @@ gulp.task('clean', function (cb) {
   return del(['dist'], cb);
 });
 
-gulp.task('vendors', ['clean'], function () {
+gulp.task('vendors1', ['clean'], function () {
   return gulp.src([
           '@angular/**',
           'core-js/client/**',
@@ -20,7 +20,7 @@ gulp.task('vendors', ['clean'], function () {
       .pipe(gulp.dest('dist/vendor'));
 });
 
-gulp.task('vendors1', ['clean'], function () {
+gulp.task('vendors2', ['clean'], function () {
   return gulpMerge(
     [
           '@angular',
@@ -36,7 +36,7 @@ gulp.task('vendors1', ['clean'], function () {
     }));
 });
 
-gulp.task('vendors2', ['clean'], function () {
+gulp.task('vendors', ['clean'], function () {
   gulp.src(['node_modules/@angular/**']).pipe(gulp.dest('dist/vendor/@angular'));
   gulp.src(['node_modules/core-js/client/**']).pipe(gulp.dest('dist/vendor/core-js/client'));
   gulp.src(['node_modules/hammerjs/**']).pipe(gulp.dest('dist/vendor/hammerjs'));
